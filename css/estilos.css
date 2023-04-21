@@ -61,17 +61,59 @@ body{
     text-align: center;
     margin: 30px;
     font-weight: normal;
+    grid-area: titulo;
 }
 
-.destacados{
+.gridFoto{
+    /* display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr; */
+    background-image: url("multimedia/portadaInicio2") ; 
+}
+
+.destacadosGrid{
     background-color:#B56576 ;
     overflow: auto;
     box-shadow: inset -1px 3px 8px 5px #bcbcb9; 
-    display: flex;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 0px 14px; 
+    grid-template-areas: 
+    "titulo titulo titulo titulo titulo"
+    "foto1 foto2 foto3 foto4 foto5"; 
+}
+
+.foto1 { 
+    grid-area: foto1; 
+    background-image: url("multimedia/destacadoMaiara.jpeg");
+}
+
+.foto2 { 
+    grid-area: foto2;
+    background-image: url("multimedia/destacadoHenrJu.jpg");
+}
+    
+.foto3 { 
+    grid-area: foto3;
+    background-image: url("multimedia/destacadoLuan.jpg"); 
+}
+
+.foto4 { 
+    grid-area: foto4;
+    background-image: url("multimedia/destacadoMarilia.jpg"); 
+}
+
+.foto5 { 
+    grid-area: foto5; 
+    background-image: url("multimedia/destacadoHugGui.jpg");
+}
+
+   /*  display: flex;
     flex-flow: row nowrap;
     justify-content: space-evenly;
-    align-items: stretch;
-}
+    align-items: stretch; */
+
 
 .fotosMasTocadas{
     width: 200px;
@@ -237,15 +279,15 @@ body{
     font-weight: normal;
 }
 
-/* ESTRUCTURA GRID */
 
+/* ESTRUCTURA GRID */
+/* 
 .contenedorGrid {
     display: grid;
     grid-template-rows: 200px 200px 400px 100px 400px 150px ;
     grid-template-columns: 300px 300px 300px 300px 300px;
     grid-template-areas: 
     "menu menu menu menu menu"
-    "titulo titulo titulo titulo titulo"
     "fotoFondo fotoFondo fotoFondo fotoFondo fotoFondo"
     "destacados destacados destacados destacados destacados"
     "foto1 foto2 foto3 foto4 foto5"
@@ -257,11 +299,9 @@ body{
     grid-area: menu;
 }
 
-.gridTitulo{
-    grid-area: titulo;
-}
-
 .gridFoto{
+    background-image: url(multimedia/portadaInicio2.jpg);
+    background-size: cover;
     grid-area: fotoFondo;
 }
 
@@ -307,3 +347,4 @@ body{
 .news{
     grid-area: news;
 }
+ */
